@@ -1,0 +1,10 @@
+#caja{
+    padding: 10px;
+    background: red;
+    width: 300px;
+}
+
+.done {
+  text-decoration: line-through;
+  color: gray;
+}
