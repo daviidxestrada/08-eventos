@@ -1,4 +1,29 @@
 const formulario = document.querySelector("#formulario")
+const hijos = document.querySelectorAll("#caja > *")
+const caja = document.querySelector("#caja")
+
+const arrayHijos = ["hijo6","hijo7","hijo8"]
+
+
+
+ document.addEventListener("click",(ev)=>{
+   
+
+    if (ev.target.matches("#caja > *")){
+         console.log(ev.target)
+    }
+
+        const valor = ev.target.textContent
+        mostrarTexto(valor)
+   })
+
+
+const pintarHijos = () =>{
+    arrayHijos.forEach((hijo)=>{
+      caja.innerHTML += `<div id=${hijo}>${hijo}</div>`
+    })
+}
+
 formulario.addEventListener("submit",(ev)=>{
     
     ev.preventDefault()
@@ -8,14 +33,7 @@ formulario.addEventListener("submit",(ev)=>{
 })
 
 const mostrarTexto=(valor)=>{
-     console.log(`El valor del input es ${valor}`)
-     formulario.submit()
+     console.log(`El valor del hijo es ${valor}`)
 }
 
-const lista = document.querySelector("#todo")
-
-lista.addEventListener("click", (ev) => {
-    if (ev.target.matches(".item")){
-        ev.target.classList.toggle("done")
-    }
-})
+pintarHijos()

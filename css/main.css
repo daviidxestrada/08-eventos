@@ -1,7 +1,8 @@
-#caja{
+#caja *{
     padding: 10px;
-    background: red;
+    background: #ff0000;
     width: 300px;
+    margin: 20px;
 }
 
 .done {
